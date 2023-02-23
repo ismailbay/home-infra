@@ -107,5 +107,5 @@ locals {
 
 resource "local_file" "k3s_inventory" {
   content = local.k3s_rendered
-  filename = "./ansible/inventory.ini"
+  filename = "../ansible/inventory/k3s.ini"
 }
