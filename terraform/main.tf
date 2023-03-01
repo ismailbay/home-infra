@@ -2,10 +2,10 @@ resource "proxmox_vm_qemu" "proxmox_vm_master" {
   count = var.num_k3s_masters
   name  = "k3s-master-0${count.index + 1}"
   desc  = "K3S Master Node"
-
+  
   sockets = "1"
   cores   = 4
-  memory  = 2048
+  memory  = 4096
   scsihw  = "virtio-scsi-pci"
 
   ipconfig0   = "gw=192.168.1.1,ip=${var.k3s_master_ip_addresses[count.index]}"
@@ -43,7 +43,7 @@ resource "proxmox_vm_qemu" "proxmox_vm_master" {
 
   lifecycle {
     ignore_changes = [
-      network, disk, sshkeys, target_node
+      network, target_node
     ]
   }
 }
@@ -93,7 +93,7 @@ resource "proxmox_vm_qemu" "proxmox_vm_worker" {
 
   lifecycle {
     ignore_changes = [
-      network, disk, sshkeys, target_node
+      network, target_node
     ]
   }
 }
