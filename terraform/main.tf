@@ -55,7 +55,7 @@ resource "proxmox_vm_qemu" "proxmox_vm_worker" {
 
   sockets = "1"
   cores   = 4
-  memory  = 8192
+  memory  = 16384
   scsihw  = "virtio-scsi-pci"
 
   ipconfig0   = "gw=192.168.1.1,ip=${var.k3s_worker_ip_addresses[count.index]}"
