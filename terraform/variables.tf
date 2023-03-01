@@ -4,7 +4,7 @@ variable "vm_ssh_keys" {
 }
 
 variable "num_k3s_masters" {
-  default = 3
+  default = 1
 }
 
 variable "k3s_master_ip_addresses" {
