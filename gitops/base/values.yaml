@@ -4,4 +4,6 @@ gitops:
 stacks:
   - name: gitops
     namespace: argocd
+    revision: base-components
   - name: system
+    revision: base-components
