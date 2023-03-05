@@ -1,6 +1,6 @@
 ingress-nginx:
   controller:
     metrics:
-      enabled: true
+      enabled: false
       serviceMonitor:
-        enabled: true
+        enabled: false
