@@ -20,3 +20,15 @@
   roles:
     - role: post
       become: true
+
+- hosts: localhost
+  tasks:
+    - name: Ensure required namespaces exist
+      kubernetes.core.k8s:
+        api_version: v1
+        kind: Namespace
+        name: "{{ item }}"
+        state: present
+      loop:
+        - argocd
+        - cert-manager
