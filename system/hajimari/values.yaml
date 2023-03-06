@@ -5,6 +5,15 @@ hajimari:
     defaultEnable: true
     namespaceSelector:
       any: true
+    globalBookmarks:
+      - group: Me
+        bookmarks:
+        - name: Github
+          url: 'https://github.com/ismailbay/'
+        - name: Gmail
+          url: 'http://gmail.com'
+        - name: Twitter
+          url: 'https://twitter.com/of_ismailbay'
   env:
     TZ: Europe/Vienna
   ingress:
