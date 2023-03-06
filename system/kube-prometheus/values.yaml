@@ -9,6 +9,8 @@ kube-prometheus-stack:
       ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/appName: Grafana
+        hajimari.io/icon: chart-areaspline-variant
       hosts:
         - &host grafana.home.ismailbay.at
       tls:

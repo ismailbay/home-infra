@@ -1,0 +1,28 @@
+hajimari:
+  hajimari:
+    name: Ismail
+    title: Home
+    defaultEnable: true
+    namespaceSelector:
+      any: true
+  env:
+    TZ: Europe/Vienna
+  ingress:
+    main:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/enable: 'false'
+      hosts:
+        - host: &host welcome.home.ismailbay.at
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - secretName: hajimari-tls-certificate
+          hosts:
+            - *host
+  persistence:
+    data:
+      enabled: false
