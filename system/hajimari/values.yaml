@@ -3,9 +3,16 @@ hajimari:
     name: Ismail
     title: Home
     defaultEnable: true
+    alwaysTargetBlank: true
     namespaceSelector:
       any: true
     globalBookmarks:
+      - group: Root
+        bookmarks:
+        - name: openWrt
+          url: 'http://192.168.1.1'
+        - name: Proxmox
+          url: 'https://192.168.1.201:8006'
       - group: Me
         bookmarks:
         - name: Github
@@ -14,6 +21,12 @@ hajimari:
           url: 'http://gmail.com'
         - name: Twitter
           url: 'https://twitter.com/of_ismailbay'
+      - group: Sources
+        bookmarks:
+        - name: CNCF
+          url: 'https://www.cncf.io'
+        - name: ArtifactHUB
+          url: 'https://artifacthub.io'
   env:
     TZ: Europe/Vienna
   ingress:
