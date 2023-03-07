@@ -1,0 +1,3 @@
+descheduler:
+  serviceMonitor:
+    enabled: false
