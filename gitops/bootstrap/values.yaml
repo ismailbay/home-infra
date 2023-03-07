@@ -1,9 +1,9 @@
 gitops:
   repo: https://github.com/ismailbay/home-infra
-  revision: base-components
+  revision: main
 stacks:
   - name: gitops
     namespace: argocd
-    revision: base-components
+    revision: main
   - name: system
-    revision: base-components
+    revision: main
