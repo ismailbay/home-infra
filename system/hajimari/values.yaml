@@ -9,24 +9,24 @@ hajimari:
     globalBookmarks:
       - group: Root
         bookmarks:
-        - name: openWrt
-          url: 'http://192.168.1.1'
-        - name: Proxmox
-          url: 'https://192.168.1.201:8006'
+          - name: openWrt
+            url: 'http://192.168.1.1'
+          - name: Proxmox
+            url: 'https://192.168.1.201:8006'
       - group: Me
         bookmarks:
-        - name: Github
-          url: 'https://github.com/ismailbay/'
-        - name: Gmail
-          url: 'http://gmail.com'
-        - name: Twitter
-          url: 'https://twitter.com/of_ismailbay'
+          - name: Github
+            url: 'https://github.com/ismailbay/'
+          - name: Gmail
+            url: 'http://gmail.com'
+          - name: Twitter
+            url: 'https://twitter.com/of_ismailbay'
       - group: Sources
         bookmarks:
-        - name: CNCF
-          url: 'https://www.cncf.io'
-        - name: ArtifactHUB
-          url: 'https://artifacthub.io'
+          - name: CNCF
+            url: 'https://www.cncf.io'
+          - name: ArtifactHUB
+            url: 'https://artifacthub.io'
   env:
     TZ: Europe/Vienna
   ingress:
