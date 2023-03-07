@@ -1,0 +1,6 @@
+kured:
+  metrics:
+    create: true
+  configuration:
+    annotateNodes: true
+    timeZone: Europe/Vienna

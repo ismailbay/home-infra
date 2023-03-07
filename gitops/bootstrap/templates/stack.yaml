@@ -9,7 +9,7 @@ spec:
   generators:
     - git:
         repoURL: {{ $.Values.gitops.repo }}
-        revision: {{ $.Values.gitops.revision }}
+        revision: {{ default `{{$.Values.gitops.revision}}` $stack.revision }}
         directories:
           - path: {{ $stack.name }}/*
   template:
@@ -23,7 +23,7 @@ spec:
       source:
         repoURL: {{ $.Values.gitops.repo }}
         path: '{{ `{{path}}` }}'
-        targetRevision: {{ $.Values.gitops.revision }}
+        targetRevision: {{ default `{{$.Values.gitops.revision}}` $stack.revision }}
       syncPolicy:
         automated:
           prune: true

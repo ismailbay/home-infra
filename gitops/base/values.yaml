@@ -1,6 +1,0 @@
-gitops:
-  repo: https://github.com/ismailbay/home-infra
-  revision: main
-stacks:
-  - name: gitops
-    namespace: argocd

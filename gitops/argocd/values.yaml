@@ -1,9 +1,26 @@
 argo-cd:
   server:
+    extraArgs:
+      - --insecure
     metrics: &metrics
-      enabled: false
+      enabled: true
       serviceMonitor:
-        enabled: false
+        enabled: true
+    ingress:
+        enabled: true
+        ingressClassName: nginx
+        annotations:
+          cert-manager.io/cluster-issuer: letsencrypt-prod
+          hajimari.io/appName: ArgoCD
+          hajimari.io/icon: jellyfish
+        hosts:
+          - &host argocd.home.ismailbay.at
+        tls:
+          - secretName: argocd-tls-certificate
+            hosts:
+              - *host
+  dex:
+    enabled: false
   controller:
     metrics: *metrics
   repoServer:
