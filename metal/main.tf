@@ -23,7 +23,7 @@ resource "proxmox_vm_qemu" "proxmox_vm_master" {
   disk {
     size    = "20G"
     type    = "scsi"
-    storage = "ssd-pool"
+    storage = "nvme-pool"
     ssd     = 1
   }
 
@@ -73,7 +73,7 @@ resource "proxmox_vm_qemu" "proxmox_vm_worker" {
   disk {
     size    = "30G"
     type    = "scsi"
-    storage = "ssd-pool"
+    storage = "nvme-pool"
     ssd     = 1
   }
 
@@ -107,5 +107,5 @@ locals {
 
 resource "local_file" "k3s_inventory" {
   content = local.k3s_rendered
-  filename = "../ansible/inventory/k3s.ini"
+  filename = "../k3s/inventory/k3s.ini"
 }
